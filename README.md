@@ -1,1 +1,1 @@
-[项目主页](http://raspberrysweetraspberry.github.io/leetcode)
+# Leetcode Go
