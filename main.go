@@ -6,6 +6,6 @@ import (
 )
 
 func main () {
-	fmt.Println(algs.NumJewelsInStones("a", "aaaa"))
+	fmt.Println(algs.HammingDistance(1,4))
 }
 
