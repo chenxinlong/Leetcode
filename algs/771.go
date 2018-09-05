@@ -16,5 +16,5 @@ func NumJewelsInStones(J string, S string) int {
 /**
  *  [analysis]
  *  Take a brief look of discussion, seems there's no better way.
- *  Time complexity : O(n) if ignore strings.Count 
+ *  Time complexity : O(n) if ignore strings.Count
  */

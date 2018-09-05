@@ -7,7 +7,7 @@ func HammingDistance(x int, y int) int {
 func countBits1(n int) int {
 	var counts int
 	for n != 0 {
-		if n % 2 == 1 {
+		if n%2 == 1 {
 			counts++
 		}
 		n /= 2
@@ -15,8 +15,6 @@ func countBits1(n int) int {
 
 	return counts
 }
-
-
 
 /**
  * [analysis]
