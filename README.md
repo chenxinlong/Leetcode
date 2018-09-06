@@ -5,7 +5,9 @@
 
 No. | Difficulty | Topics
 ----|----|----
-[461](./algs/461.go) | easy | bit manipulation
+[461](./algs/461.go) | easy | bit manipulation 
+[561](./algs/561.go) | easy | array
 [617](./algs/617.go) | easy | tree
 [657](./algs/657.go) | easy | string
+[728](./algs/728.go) | easy | math 
 [771](./algs/771.go) | easy | hash table
