@@ -2,11 +2,10 @@ package main
 
 import (
 	"leetcode/algs"
-	"fmt"
 )
 
 func main () {
-	a := []int{1}
-	fmt.Println(algs.FindMaxConsecutiveOnes(a))
+	a := []int{0,1,0,3,12}
+	algs.MoveZeroes(a)
 }
 
