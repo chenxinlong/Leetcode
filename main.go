@@ -2,10 +2,11 @@ package main
 
 import (
 	"leetcode/algs"
+	"fmt"
 )
 
 func main () {
-	a := []int{0,1,0,3,12}
-	algs.MoveZeroes(a)
+	a := "A"
+	fmt.Println(algs.DetectCapitalUse(a))
 }
 
