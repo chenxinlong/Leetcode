@@ -6,7 +6,5 @@ import (
 )
 
 func main () {
-	a := "A"
-	fmt.Println(algs.DetectCapitalUse(a))
 }
 
