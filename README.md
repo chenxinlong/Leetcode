@@ -13,7 +13,8 @@ No. | Difficulty | Topics
 [344](./algs/344.go) | easy | two pointers, string
 [389](./algs/389.go) | easy | hash table, bit manipulation
 [412](./algs/412.go) | easy | -
-[461](./algs/461.go) | easy | bit manipulation 
+[448](./algs/448.go) | easy | array
+[461](./algs/461.go) | easy | bit manipulation
 [476](./algs/476.go) | easy | bit manipulation 
 [485](./algs/485.go) | easy | array
 [496](./algs/496.go) | easy | stack
