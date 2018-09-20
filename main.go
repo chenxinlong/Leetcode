@@ -1,13 +1,14 @@
 package main
 
 import (
-	"fmt"
 	"leetcode/algs"
+	"fmt"
 )
 
 func main () {
-	a := []int{4,3,2,7,8,2,3,1}
-	fmt.Println(algs.FindDisappearedNumbers(a))
+	a := []int{1,2,2,1}
+	b := []int{2,2}
+	fmt.Println(algs.Intersection(a, b))
 
 }
 
