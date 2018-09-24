@@ -1,12 +1,20 @@
 # Leetcode Go
+## Classical 
+Classical question relate to topics   
 
-## algorithm 
+### Linked list  
+206
+
+
+## Algorithm 
 
 No. | Difficulty | Topics
 ----|----|----
 [104](./algs/104.go) | easy | tree, depth-first search
 [136](./algs/136.go) | easy | hash table, bit manipulation
+[169](./algs/169.go) | easy | array, divide and conquer, bit manipulation
 [171](./algs/171.go) | easy | math
+[206](./algs/206.go) | easy | linked list
 [226](./algs/226.go) | easy | tree
 [258](./algs/258.go) | easy | math
 [283](./algs/283.go) | easy | array, two pointers
