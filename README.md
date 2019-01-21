@@ -34,5 +34,11 @@ No. | Difficulty | Topics
 [561](./algs/561.go) | easy | array
 [617](./algs/617.go) | easy | tree
 [657](./algs/657.go) | easy | string
+[709](./algs/709.go) | easy | string
 [728](./algs/728.go) | easy | math 
 [771](./algs/771.go) | easy | hash table
+[804](./algs/804.go) | easy | string
+[905](./algs/905.go) | easy | array 
+[929](./algs/929.go) | easy | string 
+[961](./algs/961.go) | easy | hash table
+[977](./algs/977.go) | easy | sort, two pointers, array 
