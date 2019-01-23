@@ -38,7 +38,9 @@ No. | Difficulty | Topics
 [728](./algs/728.go) | easy | math 
 [771](./algs/771.go) | easy | hash table
 [804](./algs/804.go) | easy | string
+[832](./algs/832.go) | easy | array  
 [905](./algs/905.go) | easy | array 
 [929](./algs/929.go) | easy | string 
+[942](./algs/942.go) | easy | math 
 [961](./algs/961.go) | easy | hash table
 [977](./algs/977.go) | easy | sort, two pointers, array 
