@@ -10,6 +10,7 @@ Classical question relate to topics
 
 No. | Difficulty | Topics
 ----|----|----
+[1](./algs/1.go)|easy|array, hash table
 [104](./algs/104.go) | easy | tree, depth-first search
 [136](./algs/136.go) | easy | hash table, bit manipulation
 [169](./algs/169.go) | easy | array, divide and conquer, bit manipulation
