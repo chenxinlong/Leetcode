@@ -26,6 +26,8 @@ func Q4Solution1(nums1 []int, nums2 []int) float64 {
 
 // 该解法借鉴了别人的题解，但是这道题leetcode给的题解不是那么好理解
 // 比较通俗的理解可以看 https://medium.com/@hazemu/finding-the-median-of-2-sorted-arrays-in-logarithmic-time-1d3f2ecbeb46
+// 时间复杂度：O(log(min(m,n)))
+// 空间复杂度：O(1)
 func Q4Solution2(nums1 []int, nums2 []int) float64 {
 	// 我们重新定义 a, b 数组, 其中 a 表示元素比较少的数组， b 表示元素比较多的数组
 	a, b, aLen, bLen := nums1, nums2, len(nums1), len(nums2)
@@ -38,23 +40,31 @@ func Q4Solution2(nums1 []int, nums2 []int) float64 {
 	// 在代码中，我们直接 (aLen + bLen + 1) / 2，就可以避免多写一些奇偶数判断的逻辑。
 	leftHalfLen := (aLen + bLen + 1) / 2
 
-	// 比较短的数组，最少为 leftHalf 贡献 0 个元素，最多为 leftHalf 贡献全部元素
+	// 比较短的数组最少为 leftHalf 贡献 0 个元素，最多为 leftHalf 贡献全部元素
 	aMinContribute := 0
 	aMaxContribute := aLen
 
-	// 题目要求的复杂度 O(log(m+n)) ，实际上是这里的二分查找。二分查找是一个如果不仔细判断，很容易就不小心出现数组越界的算法。
-	// 假定 a 贡献 m 个元素给 leftHalf，那么 b 则贡献 leftHalfLen - m 个元素
+	// 假设结果是 a,b 各自贡献 x,y 个元素给 leftHalf，那么这个算法本质就是在根据以下几个性质来不断验证和调整 x 和 y :
+	// 1. x + y = len(a ∪ b)/2
+	// 2. median = max(a[x-1], b[y-1])
+	// 3. a[x] > median, b[y] > median
 	for aMinContribute <= aMaxContribute {
+		// 假定 a 贡献 m 个元素给 leftHalf，那么 b 则贡献 leftHalfLen - m 个元素
 		// aContribute 原本应该是 (aMaxContribute + aMinContribute)/2，但是用这个公式在某些 edge case 下会导致后面流程中出现数组越界
 		aContribute := aMinContribute + ((aMaxContribute - aMinContribute) / 2)
 		bContribute := leftHalfLen - aContribute
 
+		// 如果 a[x-1] > b[y-1]，那么说明 a[x-1] 是中位数(leftHalf最后一个元素/leftHalf最大元素)。
+		// 这样一来， rightHalf 不可能有比 a[x-1] 更小的元素，也就是处于 rightHalf 的 b[y] 不可能比 a[x-1] 小。如果有则说明 a[x-1] 一定在 rightHalf, 也就是 a 不可能贡献 x 这么多个元素给 leftHalf，那么我们就得把 a[x-1] 元素剔除掉再次试错
 		if aContribute > 0 && a[aContribute-1] > b[bContribute]  {
-			// a 贡献元素没有那么多，要减少一个
 			aMaxContribute = aContribute - 1
+
+		// 如果 b[y-1] > a[x-1]，那么说明 b[y-1] 是中位数(leftHalf最后一个元素/leftHalf最大元素)。
+		// 这样一来，rightHalf 不可能有笔 b[y-1] 更小的元素，也就是处于 rightHalf 的 a[x] 不可能比 b[y-1] 小。如果有则说明 a[x] 一定在 leftHalf，也就是 a 不可能贡献 x 这么少个元素给 leftHlaf, 那么我们就得把 a[x] 元素假如到 leftHalf 再次试错
 		} else if aContribute < aLen  && b[bContribute-1] > a[aContribute] {
-			// a 贡献元素不止这么少，要增加一个
 			aMinContribute = aContribute + 1
+
+		// 如果进入最后一个 else，表明我们已经得到正确的 x 和 y, 那么接下来就是求中位数
 		} else {
 			var leftHalfEnd float64
 			// 如果 a 贡献 0 个元素，那么 leftHalf 最后一个元素就是 b 贡献的最后一个元素
