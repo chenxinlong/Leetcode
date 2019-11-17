@@ -6,7 +6,6 @@ import (
 )
 
 func main () {
-	a := algs.Q20Solution1("){")
-	fmt.Println(a)
+	fmt.Println(algs.Q26Solution1([]int{1,1,2}))
 }
 

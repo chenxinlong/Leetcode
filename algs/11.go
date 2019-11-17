@@ -40,8 +40,8 @@ func Q11Solution1(height []int) int {
 func Q11Solution2(height []int) int {
 	left, right, maxArea := 0, len(height)-1, 0
 	for left < right {
-		currentArea := min(height[left], height[right]).(int) * (right-left)
-		maxArea = max(currentArea, maxArea).(int)
+		currentArea := min(height[left], height[right]) * (right-left)
+		maxArea = max(currentArea, maxArea)
 
 		if height[left] < height[right] {
 			left++

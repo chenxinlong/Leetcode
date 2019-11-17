@@ -31,6 +31,7 @@
 [18 四数之和](./algs/18.go) | medium |    
 [19 移除单链表倒数第n个节点](./algs/19.go) | medium |   
 [20 括号是否有效](./algs/20.go) | easy |   
+[21 合并有序单链表](./algs/21.go) | easy | 单链表|   ★★☆☆☆ |   
 [104](./algs/104.go) | easy | 树, 深度优先搜索
 [136](./algs/136.go) | easy | 哈希表, 位运算
 [169](./algs/169.go) | easy | divide and conquer(分治法)、 位运算
