@@ -1,12 +1,9 @@
 package main
 
-import (
-	"fmt"
-	"github.com/chenxinlong/leetcode/algs"
-)
+import "fmt"
 
 func main () {
-
-	fmt.Println(algs.Q76Solution1("aaaaaaaaaaaabbbbbcdd", "abcdd"))
+	a := []int{1,2,3}
+	fmt.Println(a[0:3])
 }
 
