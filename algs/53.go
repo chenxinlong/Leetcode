@@ -33,7 +33,37 @@ func Q53Solution1(nums []int) int {
 	return max
 }
 
+// 因为要求连续子数组，所以这题我们思路和第 3 题一样，用 slide window 来减少不必要的子数组比较。
 func Q53Solution2(nums []int) int {
+	numsLen := len(nums)
+	if numsLen < 1 {
+		return 0
+	}
+
+	max := nums[0]
+	for i,j :=0,0; j<numsLen;  {
+		subarray := nums[i:j+1]
+		sum := 0
+		for _, k := range subarray {
+			sum += k
+		}
+		if sum >= max {
+			max = sum
+			j++
+		} else {
+			if i < j {
+				i++
+			} else {
+				j++
+			}
+		}
+	}
+
+	return max
+}
+
+// 这个解法来自 ：https://leetcode.com/problems/maximum-subarray/discuss/119798/Greedy-Go-100-solution
+func Q53Solution3(nums []int) int {
 	max := -(1<<63)
 	crt := 0
 

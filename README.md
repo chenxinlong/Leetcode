@@ -25,6 +25,8 @@
 [19 移除单链表倒数第n个节点](./algs/19.go) | medium |   
 [20 括号是否有效](./algs/20.go) | easy |   
 [21 合并有序单链表](./algs/21.go) | easy | 单链表|  
+[23 合并 k 个有序单链表](./algs/23.go) | hard | 单链表|  
+[24 链表相邻节点交换](./algs/24.go) | medium | 单链表|  
 [38 Count and say](./algs/38.go) | easy |  字符串 |  
 [53 最大子数组和](./algs/53.go) | easy | 分治法、动态规划 | 
 [76 最小窗口子串](./algs/76.go) | hard | 滑动窗口 |  
