@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/chenxinlong/leetcode/algs"
+)
 
 func main () {
-	m := []int{0,1,2,3,4,5}
-	fmt.Println(m[1:])
+	ca := []int{1,2,3}
+	fmt.Println(algs.Q1313Solution1(ca))
 }
 
