@@ -81,6 +81,8 @@
 [965 单值二叉树](./algs/965.go) | easy | 树  
 [977 有序数组的平方](./algs/977.go) | easy | 排序、双指针、数组  
 [1108 IP 地址无效化](./algs/1108.go) | easy | 字符串   
+[1281 Subtract the Product and Sum of Digits of an Integer](./algs/1281.go) | easy | 数学   
+[1295 找到偶数长度的元素个数](./algs/1295.go) | easy | 数组   
 [1313 解压缩编码列表](./algs/1313.go) | easy | 数组
 
 ### SQL  
