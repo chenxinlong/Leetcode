@@ -39,3 +39,30 @@ func minFloat64(a, b float64) float64 {
 	}
 	return a
 }
+
+// 数组转单链表
+func ArrayToSingleLinkedList(arr []int) *ListNode {
+	if len(arr) == 0 {
+		return nil
+	}
+
+	head := new(ListNode)
+	p := head
+	for _, n := range arr {
+		p.Next = &ListNode{
+			Val:n,
+		}
+		p = p.Next
+	}
+	return head.Next
+}
+
+// 单链表转数组
+func SingleLinkedListToArray(head *ListNode) []int {
+	arr := []int{}
+	for head != nil {
+		arr = append(arr, head.Val)
+		head = head.Next
+	}
+	return arr
+}
